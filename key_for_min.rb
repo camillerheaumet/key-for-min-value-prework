@@ -7,8 +7,12 @@ def key_for_min_value(name_hash)
   
   if name_hash.length > 0
     name_hash.each do |key, value|
-       key[value] <=> key[value + 1]
-       
+       #key[value] <=> key[value + 1]
+       if value < loestValue
+         loestValue = value
+         loestKey = key
+        
       end
   end
+  loestKey
 end
